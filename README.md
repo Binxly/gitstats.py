@@ -25,13 +25,11 @@ The project is split into two stages:
 git clone https://github.com/Binxly/gitstats.py.git
 cd gitstats.py
 
-python -m venv venv
-# MacOS/Linux: python3 -m venv venv
+python3 -m venv venv
 
 source venv/bin/activate
 
-pip install -r requirements.txt
-# MacOS/Linux: pip3 install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 # Usage
