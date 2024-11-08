@@ -6,6 +6,7 @@ The idea was simple: a CLI tool to track *local* git repositories and their cont
 I wanted to learn more about Go, and figured this would be a fun project to start with.
 
 After many skill issues and some coping, I decided to recreate the core functionality using Python instead. Feel free to use this, steal this, add to this, give this to your friends, your AI agents, whatever. Blog post WIP.
+
 ---
 The project is split into two stages:
 
