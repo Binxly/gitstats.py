@@ -21,7 +21,7 @@ The project is split into two stages:
 # Installation 
 ![img_installation.png](extras/img_installation.png)
 ```bash
-git clone <isweariwillfillinthisURL>
+git clone https://github.com/Binxly/gitstats.py.git
 cd gitstats.py
 
 python -m venv venv
