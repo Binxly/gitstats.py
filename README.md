@@ -15,7 +15,7 @@ The project is split into two stages:
    - Stores found repository paths in `~/.pygitlocalstats`
 
 2. **Stats Generation**:
-   - Reads the cached repository paths from `~/.pygitlocalstats`
+   - Reads the cached repository paths (example: `~/.pygitlocalstats`)
    - Collects commit history for a specified email address (`git config user.email`)
    - Generates a GitHub-style contribution graph for the last 6 months
 
