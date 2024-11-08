@@ -142,22 +142,15 @@ class GitStats:
     def _print_cells(self, cols: Dict[int, List[int]]) -> None:
         self._print_months()
 
-        # iterates through days of week from Sunday (6) to Monday (0)
-        # iterates through weeks from last 6 months to current week
-        # first if statement prints day labels on left (Mon, Wed, Fri)
-        # second if statement prints the number of commits for the day
-        # 1) does this week exist in commit data?
-        # 2) is it within range of this week?
-        # if yes, determine if today
-        # else statement prints empty cells for days with no commits
-        for day in range(6, -1, -1):
-            for week in range(self.WEEKS_IN_LAST_6_MONTHS + 1, -1, -1):
+        for day in range(6, -1, -1):  # Iterate days (Sun to Mon)
+            for week in range(self.WEEKS_IN_LAST_6_MONTHS + 1, -1, -1):  # Iterate weeks (last 6 months to current)
                 if week == self.WEEKS_IN_LAST_6_MONTHS + 1:
-                    self._print_day_col(day)
+                    self._print_day_col(day)  # Print left day labels (Mon, Wed, Fri)
 
+                # Check if week has data and day is within range
                 if week in cols and len(cols[week]) > day:
-                    is_today = week == 0 and day == self._calc_offset() - 1
-                    self._print_cell(cols[week][day], is_today)
+                    is_today = week == 0 and day == self._calc_offset() - 1  # Check if today
+                    self._print_cell(cols[week][day], is_today)  # Print commit count
                 else:
-                    self._print_cell(0, False)
-            print()
+                    self._print_cell(0, False)  # Print empty cell if no data
+            print()  # Newline after each week
